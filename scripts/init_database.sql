@@ -26,7 +26,7 @@ begin
 	go
 --create database ravenstack_dw
 create database ravenstack_dw;
-
+go
 use ravenstack_dw;
 go
 --create schemas
