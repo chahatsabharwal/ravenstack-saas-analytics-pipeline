@@ -1,3 +1,15 @@
+/*
+-----------------------------------------------------------
+Silver Tables Setup Script
+-----------------------------------------------------------
+
+What this does:
+    - Creates tables inside the 'silver' schema
+    - If a table is already there, it will be dropped first
+    - Use this script whenever you want to reset or rebuild
+      the structure of the silver tables
+-----------------------------------------------------------
+*/
 -- Drop the table if it already exists
 if object_id('ravenstack_dw.silver.ravenstack_accounts', 'U') is not null
     drop table ravenstack_dw.silver.ravenstack_accounts;
