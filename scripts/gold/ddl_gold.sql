@@ -172,6 +172,7 @@ FROM (
     SELECT DISTINCT CAST(signup_date AS DATE) FROM silver.ravenstack_accounts
 ) d;
 -------------------------------------------------------------------------------------------------
+go
 --fact tables or views
 CREATE VIEW gold.vw_Fact_Accounts AS
 WITH subscription_agg AS (
