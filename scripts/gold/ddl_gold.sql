@@ -17,7 +17,7 @@ select
     ac.industry,
     ac.country,
     cast(ac.signup_date as date) as signup_date,
-    ac.refferral_source, -- retained dataset-specific spelling for pipeline mapping
+    ac.refferral_source,
     ac.is_trial,
     ac.churn_flag as account_churn_flag,
     isnull(ch.reason_code, 'active customer') as churn_reason_code,
@@ -85,7 +85,7 @@ create view gold.vw_fact_featureusage as
 select 
     fu.usage_id,
     fu.subscription_id,
-    su.account_id, -- linked for easy relational traversal in bi tools
+    su.account_id,
     cast(fu.usage_date as date) as usage_date_id,
     fu.feature_name,
     isnull(fu.usage_count, 0) as usage_count,
